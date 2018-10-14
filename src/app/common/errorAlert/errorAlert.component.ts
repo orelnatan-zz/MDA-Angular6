@@ -9,11 +9,15 @@ export class ErrorAlert {
   
     isShown: boolean;
 
-    showAlert() {
+    showAlert(): void {
         this.isShown = true;
     }
 
-    hideAlert() {
+    hideAlert(): void {
         this.isShown = false;
+    }
+
+    print(){
+        console.log('ggdf');
     }
 }

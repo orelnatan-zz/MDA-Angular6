@@ -37,10 +37,6 @@ export class SingleAccident implements OnInit {
                 
                 if(response.map(accident => accident['MDA']).indexOf(mda) == -1){
                     this.alert.showAlert();
-                    
-                    setTimeout(() => {
-                        this.navigateToHomePage();
-                    }, 2000);
                     return;
                 }
 
