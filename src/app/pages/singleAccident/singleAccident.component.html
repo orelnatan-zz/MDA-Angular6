@@ -1,0 +1,36 @@
+
+<error-alert #alertRef> </error-alert>
+<loader #loaderRef> </loader>
+
+<div class="global-page-main" *ngIf="renderPage">
+    <span class="single-accident-home" (click)="navigateToHomePage()"> </span>
+    <div class="global-page-body">
+        <header [header]="'Event MDA - ' + mda"> </header>
+        <span class="global-separator"></span>
+
+        <sub-header [subHeader]="'Location'"> </sub-header>
+        <span class="global-separator"></span>
+
+        <div class="single-accident-map-container">
+            <div class="single-accident-geo-location">
+                <location-view [location]="location"> </location-view>
+            </div>
+
+            <div class="single-accident-map">
+                <google-maps [title]="'Accident Location'" 
+                    [zoom]="15" 
+                    [location]='location' 
+                    [size]="{width: '500px', height: '500px'}"> 
+                </google-maps>
+            </div>
+        </div>
+
+        <span class="global-separator"></span>
+        <sub-header [subHeader]="'Injuries'"> </sub-header>
+        <span class="global-separator"></span>
+
+        <div class="single-accident-injuries-list">
+            <injuries-list [injuries]='injuries'> </injuries-list>
+        </div>
+    </div>
+</div>

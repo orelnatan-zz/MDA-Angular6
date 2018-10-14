@@ -1,0 +1,12 @@
+
+<div class="accidents-list-main">
+    <div class="accidents-list-header">
+        <accidents-header> </accidents-header>
+    </div>
+
+    <div class="accidents-list-body">
+        <div class="accidents-list-accident" *ngFor="let accident of accidents">
+            <accident-row [accident]="accident" (rowClicked)="accidentSelected.emit($event)"></accident-row>
+        </div>
+    </div>
+</div>

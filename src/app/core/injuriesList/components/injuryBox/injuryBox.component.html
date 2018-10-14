@@ -1,0 +1,24 @@
+
+<div class="injury-box-main" [ngStyle]="{'border-top-color': getBorderColorBySeverity(injury.severity)}">
+    <div class="injury-box-body">
+        <div class="injury-box-cover"> </div>
+        <div>
+            <div class="injury-box-data">
+                <span class="injury-box-field">Severity:&ensp;</span>
+                <span class="injury-box-value">{{injury.severity}}.</span>
+            </div>
+            <div class="injury-box-data">
+                <span class="injury-box-field">Location:&ensp;</span>
+                <span class="injury-box-value">{{injury.location}}.</span>
+            </div>
+        </div>
+        <div>
+            <div class="injury-box-data">
+                <span class="injury-box-field">Description:&ensp;</span>
+            </div>
+            <div class="injury-box-data">
+                <span class="injury-box-value">{{injury.description}}</span>
+            </div>
+        </div>
+    </div>
+</div>

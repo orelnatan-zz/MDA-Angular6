@@ -1,0 +1,13 @@
+
+.injuries-list-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .injuries-list-injury {
+        display: block;
+        margin: 10px;
+    }
+}

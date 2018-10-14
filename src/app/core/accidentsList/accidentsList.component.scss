@@ -1,0 +1,19 @@
+
+.accidents-list-main {
+    display: block;
+    width: 100%;
+
+    .accidents-list-body {
+        display: block;
+    }
+}
+
+
+.accidents-list-accident:nth-child(even) {
+    background: #222;
+}
+
+.accidents-list-accident:nth-child(odd) {
+    background: #2C3034;
+}
+

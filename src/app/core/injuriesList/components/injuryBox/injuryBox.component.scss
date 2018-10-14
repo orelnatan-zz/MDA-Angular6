@@ -1,0 +1,61 @@
+
+.injury-box-main {
+    display: block;
+    overflow: hidden;
+    width: 315px;
+    height: 225px;
+    background: #222;
+    border-top: 10px solid;
+    box-shadow: 5px 5px 5px gray;
+    transition: 0.3s;
+
+    .injury-box-body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        z-index: 0;
+
+        &:hover {
+            cursor: pointer;
+            
+            .injury-box-cover {
+                opacity: 0;
+            }
+        }
+    }
+
+    .injury-box-data {
+        display: block;
+        color: white;
+        font-weight: 700;
+    }
+
+    .injury-box-field {
+        font-weight: 700;
+    }
+
+    .injury-box-value {
+        font-size: 14px;
+    }
+
+    .injury-box-cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: black;
+        opacity: 0.4;
+        z-index: 1;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        box-shadow: 10px 8px 8px gray;
+    }
+
+}

@@ -1,0 +1,7 @@
+
+<div class="accident-row-main" (click)="rowClicked.emit(accident.MDA)">
+    <div class="accident-row-cell"><span class="accident-row-value">{{accident.MDA}}</span></div>
+    <div class="accident-row-cell"><span class="accident-row-value">{{accident.EventTime | utcToIdt}}</span></div>
+    <div class="accident-row-cell"><span class="accident-row-value">{{accident.mechanism}}</span></div>
+    <div class="accident-row-cell"><span class="accident-row-value">{{accident.kinematic}}</span></div>
+</div>
