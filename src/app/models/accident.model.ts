@@ -2,8 +2,8 @@ import { Injury } from './injury.modal';
 import { Location } from './location.modal';
 
 export interface Accident {
-    eventTime: string;
-    mda: string;
+    EventTime: string;
+    MDA: string;
     gps: Location;
     injuries: Array<Injury>;
     isTreated: boolean;

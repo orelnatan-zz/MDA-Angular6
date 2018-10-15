@@ -17,7 +17,7 @@ export class AccidentsList implements OnChanges {
 
     ngOnChanges(){                  
         this.accidents.sort(function (left, right) {    // On data arrival, sort array by date(asc order)
-              return moment.utc(right['EventTime']).diff(moment.utc(left['EventTime']))
+              return moment.utc(right.EventTime).diff(moment.utc(left.EventTime))
         });
     }
 

@@ -36,17 +36,17 @@ export class SingleAccident implements OnInit {
 
                 this.loader.switchOffSpinner();
 
-                if(response.map(accident => accident['MDA']).indexOf(mda) == -1){
+                if(response.map(accident => accident.MDA).indexOf(mda) == -1){
                     this.renderPage = false;
                     return;
                 }
 
                 this.renderPage = true;
-                let accident: Accident = response.find(accident => accident['MDA'] == mda);
+                let accident: Accident = response.find(accident => accident.MDA == mda);
 
                 this.injuries = accident.injuries;
                 this.location = accident.gps;
-                this.mda = ' ' + accident['MDA'];
+                this.mda = ' ' + accident.MDA;
             }, (response) => {
               console.log('Error', response);
 
