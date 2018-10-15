@@ -1,15 +1,16 @@
+@import '../../../../../assets/config/utils';
 
 .accidentsHeader-main {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background: #E9ECEF;
+    background: $color-silver;
     color: #222;
     font-weight: bold;
     padding: 15px 0px 15px 0px;
 
     .accidentsHeader-header {
-        display: block;
+        display: $color-black;
         width: 100%;
         text-align: center;
     }

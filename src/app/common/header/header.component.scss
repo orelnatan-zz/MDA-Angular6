@@ -1,6 +1,7 @@
+@import '../../../assets/config/utils';
 
 .header-title {
     font-weight: bold;
-    color: #222;
-    border-bottom: 2px solid #eee; 
+    color: $color-dark-gray;
+    border-bottom: 2px solid $color-milk;
 }

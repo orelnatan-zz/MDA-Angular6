@@ -1,19 +1,23 @@
 
 <loader #loaderRef> </loader>
-<error-alert #alertRef> </error-alert>
+
+<div class="global-error" *ngIf="renderPage==false">
+    <h3>Error! GET request failed :(&ensp;</h3>
+    <span>Reload and try again.</span>
+</div>
 
 <div class="global-page-main" *ngIf="renderPage">
     <div class="global-page-body">
         <header [header]="'Registered Events'"> </header>
         <span class="global-separator"></span>
-        
+
         <sub-header [subHeader]="'Treated Accidents'"> </sub-header>
         <span class="global-separator"></span>
-        <accidents-list [accidents]="treatedAccidents" (accidentSelected)="navigateToAccidentPage($event)"> </accidents-list> 
+        <accidents-list [accidents]="treatedAccidents" (accidentSelected)="navigateToAccidentPage($event)"> </accidents-list>
         <span class="global-separator"></span>
-        
+
         <sub-header [subHeader]="'Non Treated Accidents'"> </sub-header>
         <span class="global-separator"></span>
-        <accidents-list [accidents]="nonTreatedAccidents" (accidentSelected)="navigateToAccidentPage($event)"> </accidents-list> 
+        <accidents-list [accidents]="nonTreatedAccidents" (accidentSelected)="navigateToAccidentPage($event)"> </accidents-list>
     </div>
 </div>

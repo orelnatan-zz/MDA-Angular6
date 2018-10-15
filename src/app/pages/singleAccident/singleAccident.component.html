@@ -1,10 +1,14 @@
 
-<error-alert #alertRef> </error-alert>
 <loader #loaderRef> </loader>
 
-<div class="global-page-main" *ngIf="renderPage">
+<div class="global-error" *ngIf="renderPage==false">
+  <h3>Oops.. something went wrong :(&ensp;</h3>
+  <span>Press the home button and try again.</span>
+</div>
+
+<div class="global-page-main">
     <span class="single-accident-home" (click)="navigateToHomePage()"> </span>
-    <div class="global-page-body">
+    <div class="global-page-body" *ngIf="renderPage">
         <header [header]="'Event MDA - ' + mda"> </header>
         <span class="global-separator"></span>
 
@@ -17,10 +21,10 @@
             </div>
 
             <div class="single-accident-map">
-                <google-maps [title]="'Accident Location'" 
-                    [zoom]="15" 
-                    [location]='location' 
-                    [size]="{width: '500px', height: '500px'}"> 
+                <google-maps [title]="'Accident Location'"
+                    [zoom]="15"
+                    [location]='location'
+                    [size]="{width: '500px', height: '500px'}">
                 </google-maps>
             </div>
         </div>

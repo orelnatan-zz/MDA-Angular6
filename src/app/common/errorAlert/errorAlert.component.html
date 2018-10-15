@@ -1,10 +1,9 @@
 
-<div (click)="print()">
-    <alert-box *ngIf="isShown"
-        [backgroundColor]="'#f2dede'"
-        [fontColor]="'#a94442'"
-        [borderColor]="'#ebccd1'" 
-        [title]="'Oops!'"
-        [note]="'Something went wrong... try again ):'">
-    </alert-box>
-</div>
+
+  <alert-box
+      [backgroundColor]="'#f2dede'"
+      [fontColor]="'#a94442'"
+      [borderColor]="'#ebccd1'"
+      [title]="'Error! MDA not exist.'"
+      [note]="'press the home button and try again'">
+  </alert-box>

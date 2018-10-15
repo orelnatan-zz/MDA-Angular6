@@ -1,3 +1,4 @@
+@import '../../../assets/config/utils';
 
 .accidents-list-main {
     display: block;
@@ -10,10 +11,10 @@
 
 
 .accidents-list-accident:nth-child(even) {
-    background: #222;
+    background: $color-dark-gray;
 }
 
 .accidents-list-accident:nth-child(odd) {
-    background: #2C3034;
+    background: $color-bright-gray;
 }
 

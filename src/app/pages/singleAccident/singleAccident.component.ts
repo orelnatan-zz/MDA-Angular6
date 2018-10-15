@@ -16,7 +16,6 @@ import { ErrorAlert } from '../../common/errorAlert';
 export class SingleAccident implements OnInit {
 
     @ViewChild('loaderRef') loader: Loader;
-    @ViewChild('alertRef') alert: ErrorAlert;
 
     injuries: Array<Injury>;
     location: Location;
@@ -32,27 +31,33 @@ export class SingleAccident implements OnInit {
         this.loader.activateSpinner();
         this.route.queryParams.subscribe(params => {
             let mda: string = params.mda;
-            
+
             this.accidents.getAccidents().subscribe((response: Accident[]) => {
-                
+
+                this.loader.switchOffSpinner();
+
                 if(response.map(accident => accident['MDA']).indexOf(mda) == -1){
-                    this.alert.showAlert();
+                    this.renderPage = false;
                     return;
                 }
 
-                this.loader.switchOffSpinner();
                 this.renderPage = true;
                 let accident: Accident = response.find(accident => accident['MDA'] == mda);
 
                 this.injuries = accident.injuries;
                 this.location = accident.gps;
                 this.mda = ' ' + accident['MDA'];
-            });  
+            }, (response) => {
+              console.log('Error', response);
+
+              this.renderPage = false;
+              this.loader.switchOffSpinner();
+            });
         });
     }
 
     navigateToHomePage(): void {
         this.router.navigate(['/Home']);
     }
-    
+
 }

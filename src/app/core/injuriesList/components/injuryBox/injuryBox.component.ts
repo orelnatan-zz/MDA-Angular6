@@ -12,17 +12,19 @@ export class InjuryBox {
     @Input() injury: Injury;
 
 
-    getBorderColorBySeverity(severity: string): string{         
+    getBorderColorBySeverity(severity: string): string{
+        let color: string;
         switch(severity){
             case 'high':
-                return 'red';
+              color = 'red';
             break;
             case 'medium':
-                return 'orange';
+                color = 'orange';
             break;
             case 'low':
-                return 'yellow';
+                color = 'yellow';
             break;
         }
+        return color;
     }
 }
