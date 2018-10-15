@@ -19,7 +19,6 @@ import { AccidentRow } from './core/accidentsList/components/accidentRow';
 import { Loader } from './core/loader'
 import { LocationView } from './core/locationView';
 import { GoogleMaps } from './core/googleMaps';
-import { AlertBox } from './core/alertBox';
 import { Header } from './common/header';
 import { SubHeader } from './common/subHeader';
 import { ErrorAlert } from './common/errorAlert';
@@ -41,7 +40,6 @@ import { ErrorAlert } from './common/errorAlert';
     LocationView,
     InjuriesList,
     InjuryBox,
-    AlertBox,
     ErrorAlert
   ],
 

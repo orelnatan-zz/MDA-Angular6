@@ -1,0 +1,11 @@
+@import '../../../assets/config/utils';
+
+.home-main {
+    @extend %page;
+    
+    .home-body {
+        @extend %body;
+    }
+
+
+}

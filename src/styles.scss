@@ -18,27 +18,7 @@ body {
     font-family: Heebo-regular;
 }
 
-.global-page-main {
-    display: block;
-    width: 100%;
-    padding: 40px 0px 40px 0px;
-}
-
-.global-page-body {
-    display: block;
-    width: 1024px;
-    margin: 0 auto;
-}
-
 .global-separator {
     display: block;
     margin: 30px 0px 30px 0px;
-}
-
-.global-error {
-    margin: 15px;
-
-    h3 {
-      color: $color-error-red;
-    }
 }

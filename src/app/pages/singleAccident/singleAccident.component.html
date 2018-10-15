@@ -1,14 +1,13 @@
 
 <loader #loaderRef> </loader>
 
-<div class="global-error" *ngIf="renderPage==false">
-  <h3>Oops.. something went wrong :(&ensp;</h3>
-  <span>Press the home button and try again.</span>
-</div>
+<error-alert *ngIf="renderPage==false"
+             [title]="'Oops.. something went wrong :('" 
+             [note]="'Press the home button and try again.'"> </error-alert>
 
-<div class="global-page-main">
+<div class="single-accident-main">
     <span class="single-accident-home" (click)="navigateToHomePage()"> </span>
-    <div class="global-page-body" *ngIf="renderPage">
+    <div class="single-accident-body" *ngIf="renderPage">
         <header [header]="'Event MDA - ' + mda"> </header>
         <span class="global-separator"></span>
 

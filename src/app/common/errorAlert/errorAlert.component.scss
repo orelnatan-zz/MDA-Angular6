@@ -1,0 +1,9 @@
+@import '../../../assets/config/utils';
+
+.error-alert-main {
+    margin: 15px;
+
+    h3 {
+      color: $color-error-red;
+    }
+}

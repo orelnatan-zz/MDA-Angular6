@@ -1,13 +1,11 @@
 
 <loader #loaderRef> </loader>
+<error-alert *ngIf="renderPage==false"
+             [title]="'Error! GET request failed :('" 
+             [note]="'Reload and try again.'"> </error-alert>
 
-<div class="global-error" *ngIf="renderPage==false">
-    <h3>Error! GET request failed :(&ensp;</h3>
-    <span>Reload and try again.</span>
-</div>
-
-<div class="global-page-main" *ngIf="renderPage">
-    <div class="global-page-body">
+<div class="home-main" *ngIf="renderPage">
+    <div class="home-body">
         <header [header]="'Registered Events'"> </header>
         <span class="global-separator"></span>
 
