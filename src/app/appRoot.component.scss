@@ -1,6 +1,5 @@
+@import '../assets/config/utils';
 
 .appRoot-main {
-    position: relative;
-    display: block;
-    min-width: 1224px;
+    @extend %root-layout;
 }
