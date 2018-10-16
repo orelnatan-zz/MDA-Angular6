@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import './assets/config/utils';
+@import './app/assets/config/utils';
 
 * {
     margin: 0;
     padding: 0;
-  }
+}
 
 @font-face {
     font-family: Heebo-regular;
@@ -16,6 +16,7 @@ body {
 }
 
 div {
+    display: block;
     box-sizing: border-box;
 }
 
@@ -23,3 +24,4 @@ div {
     display: block;
     margin: 30px 0px 30px 0px;
 }
+
